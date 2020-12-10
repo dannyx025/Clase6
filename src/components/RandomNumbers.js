@@ -4,10 +4,11 @@ import {StyleSheet, Text, TouchableOpacity}  from 'react-native';
 export default RandomNumbers = ({ id, number, disabled, onSelected }) => {
     
     const handlePress = () => {
-
-        console.log(number);
-        onSelected(id);
-           }
+        if(!disabled){
+     
+            onSelected(id);
+        }
+           };
     
     return (
     <TouchableOpacity onPress={handlePress}>
